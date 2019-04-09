@@ -39,12 +39,13 @@ File -> Import -> Git -> Projects from Git -> Existing local repository -> Add $
 
 - Postman or any other API tester must be already installed in your machine. Otherwise, you will have to install them. You can perform the requests below in order to test the application:
 
-|   | HTTP Request | Endpoint | Body |
+| Action | HTTP request method | Endpoint | Body example |
 | ------------- | ------------- | ------------- | ------------- |
-| Create new user  | POST  | /api/user  | {"fname": "Luka", "lname": "Doncic"} |
-| Read all topics  | GET  | /users | |
-
-(In progress)
+| Create new user | POST  | **/api/user**  | {"fname": "Steven", "lname": "Adams"} |
+| Read all users | GET  | **/api/users** | |
+| Read user | GET  | **/api/user**/3 | |
+| Update user | PUT  | **/api/user** | {"id": "3", "fname": "Anthony", "lname": "Davis"}|
+| Delete user | DELETE  | **/api/user**/3 | |
 
 
 ## References
