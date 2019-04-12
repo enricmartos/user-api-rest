@@ -37,7 +37,7 @@ File -> Import -> Git -> Projects from Git -> Existing local repository -> Add $
 
 - Run the project as Spring Boot App
 
-- Postman or any other API tester must be already installed in your machine. Otherwise, you will have to install them. You can perform the requests below in order to test the application:
+- Postman or any other API tester must be already installed in your machine. Otherwise, you will have to install them. You can perform the requests below in order to test the application. They belong to *User management API* collection, which can be easly imported to Postman with [this](https://www.getpostman.com/collections/b9203126dbd425c19203) shareable link. 
 
 | Action | HTTP request method | Endpoint | Body example |
 | ------------- | ------------- | ------------- | ------------- |
