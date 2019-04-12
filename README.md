@@ -50,7 +50,9 @@ File -> Import -> Git -> Projects from Git -> Existing local repository -> Add $
 
 ## References
 
-I have accomplished the aforementioned goals thanks to the following course:
+I have accomplished the aforementioned goals thanks to the following courses:
 
 - [Angular-4 with Spring boot Rest CRUD operations](https://www.youtube.com/watch?v=ioYJx-rNNoI&list=PLF0fAweo0Kogzy5I6LxEaIlJAxVORXZm-&index=1)
+- [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
+
 
