@@ -17,7 +17,7 @@ This REST API application is a user management tool which allows you to see, edi
 - Hibernate (as a JPA framework)
 
 *Database*
-- H2
+- MySQL
 
 *Dependency management tool*
 - Gradle
@@ -25,17 +25,45 @@ This REST API application is a user management tool which allows you to see, edi
 *IDE*
 - IntellIJ Idea
 
+*Containerization*
+- Docker-compose
+
 ## Build setup
 
-- Clone this repo to your local machine. If you use Spring Tool Suite as IDE, open this project there:
+### With Docker
+
+- Clone this repo to your local machine. Docker-compose version must above 1.18 (Upgrade docker-compose to the latest version)[https://stackoverflow.com/questions/49839028/how-to-upgrade-docker-compose-to-latest-version]. Don't forget to restart your shell after performing all the steps.
+```
+# Start docker-compose
+
+$ docker-compose up
+```
+
+This command creates the three docker containers detailed below:
+
+- _user-rest-api_app_1_: Main container of the Spring Boot application
+
+- _user-rest-api_mysql_1_: DB container
+
+- _user-rest-api-adminer_1_: DB management tool to interact with the MySQL DB
+
+Adminer's credentials are the ones defined in .env file.
+
+### Without Docker
+
+- Clone this repo to your local machine. If you use IntelliJ as IDE, open this project there.
+
+- MySQL (and MySQL Workbench, optionally) must be already installed in your machine. Otherwise, you will have to install them. Please notice that the default parameters (port, username and password) to enable the MySQL connection are defined on application.properties file. So, feel free to edit them in order to match one of your MySQL connections.
 
 ```
-# Import the project to STS
+# Create the db
 
-File -> Import -> Git -> Projects from Git -> Existing local repository -> Add ${Directory where you have cloned the repo} -> Import existing Eclipse projects
+CREATE SCHEMA `user_db` ;
 ```
 
 - Run the project as Spring Boot App
+
+## Usage
 
 - Postman or any other API tester must be already installed in your machine. Otherwise, you will have to install them. You can perform the requests below in order to test the application. They belong to *User management API* collection, which can be easly imported to Postman with [this](https://www.getpostman.com/collections/b9203126dbd425c19203) shareable link. 
 
