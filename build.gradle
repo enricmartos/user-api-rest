@@ -5,17 +5,29 @@ plugins {
 
 apply plugin: 'io.spring.dependency-management'
 
-group = 'emartos'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+//group = 'emartos'
+//version = '0.0.1-SNAPSHOT'
+//sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
 }
 
+description = "user-rest-api"
+
+group 'emartos'
+
+bootJar {
+	mainClassName = 'emartos.apirest.ApirestApplication'
+	baseName = 'user-rest-api'
+	version =  '1.0'
+}
+
+sourceCompatibility = 1.8
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'com.h2database:h2'
+	implementation 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
