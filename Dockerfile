@@ -20,4 +20,5 @@ COPY --from=TEMP_BUILD_IMAGE $APP_HOME/build/libs/$ARTIFACT_NAME .
 
 # expose the port (configured on app.props server port)
 EXPOSE 8086
-CMD exec java -jar $ARTIFACT_NAME
+# CMD exec java --agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar $ARTIFACT_NAME
+ENTRYPOINT ["java", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005","-jar", "user-rest-api-1.0.jar"]

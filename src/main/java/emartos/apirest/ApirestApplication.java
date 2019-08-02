@@ -19,7 +19,5 @@ public class ApirestApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		userRepository.save(new User("Russell", "Westbrook"));
-		userRepository.save(new User("Paul", "George"));
 	}
 }
