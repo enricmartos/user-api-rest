@@ -67,13 +67,13 @@ CREATE SCHEMA `user_db` ;
 
 - Postman or any other API tester must be already installed in your machine. Otherwise, you will have to install them. You can perform the requests below in order to test the application. They belong to *User management API* collection, which can be easly imported to Postman with [this](https://www.getpostman.com/collections/f4b461a677e6d06ae204) shareable link. 
 
-| Action | HTTP request method | Endpoint | Body example |
-| ------------- | ------------- | ------------- | ------------- |
-| Create new user | POST  | **/api/user**  | {"fname": "Steven", "lname": "Adams"} |
-| Read all users | GET  | **/api/users** | |
-| Read user | GET  | **/api/user**/3 | |
-| Update user | PUT  | **/api/user** | {"id": "3", "fname": "Anthony", "lname": "Davis"}|
-| Delete user | DELETE  | **/api/user**/3 | |
+| Action | HTTP request method | Endpoint | Endpoint example| Body example |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Create new user | POST  | **/api/user** | **/api/user** | {"fname": "Steven", "lname": "Adams"} |
+| Read all users | GET  | **/api/users** | **/api/users** | |
+| Read user | GET  | **/api/user**/{id} | **/api/user/1** ||
+| Update user | PUT  | **/api/user** | **/api/user** | {"id": "1", "fname": "Anthony", "lname": "Davis"}|
+| Delete user | DELETE  | **/api/user**/{id} | **/api/user**/1 | |
 
 
 ## References
